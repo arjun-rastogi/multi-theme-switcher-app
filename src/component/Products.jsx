@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+https React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { ThemeContext } from "../ThemeContext";
 
@@ -31,7 +31,7 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get("https://fakestoreapi.com/products")
+      .get("https://fakestoreapi.in/api/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
   }, []);
