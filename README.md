@@ -1,70 +1,171 @@
-# Getting Started with Create React App
+# 🛍️ React E‑Commerce Demo with Theme Switcher
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern **React** e‑commerce demo showcasing **theme switching, API integration, responsive design, and smooth animations**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ **Features**
 
-### `npm start`
+- 🎨 **Persistent Themes**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Light, Dark, and Colorful modes
+  - Theme is stored in `localStorage` to persist across reloads
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- 🛠 **Context API**
 
-### `npm test`
+  - Centralized theme management using React Context
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🌐 **API Integration**
 
-### `npm run build`
+  - Product data fetched from [FakeStore API](https://fakestoreapi.com/products)
+  - Fallback mock data in case of failure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 📱 **Responsive Design**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Built with **Tailwind CSS** and **CSS Modules**
+  - Optimized for **mobile, tablet, and desktop**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- 🔄 **Smooth Theme Animations**
 
-### `npm run eject`
+  - Subtle loader animation when switching themes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 🗺 **Multiple Pages with React Router**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  - **Home**, **About**, **Contact**, **Products**, and a custom **404 Error** page
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- 🔒 **Secure and Modern**
+  - HTTPS API calls
+  - Safe rendering (no HTML injection)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🚀 **Getting Started**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **Prerequisites**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Node.js**  
+   Download and install **Node.js LTS**:  
+   👉 [https://nodejs.org](https://nodejs.org)
 
-### Code Splitting
+   Verify installation:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   node -v
+   npm -v
+   ```
 
-### Analyzing the Bundle Size
+2. **Visual Studio Code**  
+   Download and install:  
+   👉 [https://code.visualstudio.com](https://code.visualstudio.com)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+### **Installation**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Clone the repository:
 
-### Advanced Configuration
+   ```bash
+   git clone https://github.com/arjun-rastogi/multi-theme-switcher-app
+   cd multi-theme-switcher-app
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+2. Install dependencies:
 
-### Deployment
+   ```bash
+   npm install
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+3. Start the development server:
 
-### `npm run build` fails to minify
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   - CRA: <http://localhost:3000>
+
+---
+
+### **Available Scripts**
+
+- `npm start` – Run the development server
+- `npm run build` – Build for production
+- `npm run preview` – Preview production build
+
+---
+
+## 🛠 **Tech Stack**
+
+- **React 18+**
+- **Tailwind CSS** for fast styling
+- **React Router DOM** for routing
+- **Context API** for global state
+- **Axios** for API calls
+- **FakeStore API** as product data source
+
+---
+
+## 📂 **Project Structure**
+
+```
+src/
+  ├── components/
+  │     ├── Header.tsx
+  │     ├── Footer.tsx
+  │     ├── Loader.tsx
+  │     └── Products.tsx
+  ├── pages/
+  │     ├── Home.tsx
+  │     ├── About.tsx
+  │     ├── Contact.tsx
+  │     ├── Error.tsx
+  ├── ThemeContext.tsx
+  ├── App.tsx
+  ├── main.tsx
+  └── index.css
+```
+
+---
+
+## 🔗 **API**
+
+**Endpoint:**
+
+```
+https://fakestoreapi.com/products
+```
+
+**Fallback:**
+
+- If the API is slow or fails, mock data is displayed.
+
+---
+
+## 🎨 **Theme Modes**
+
+- **Light (Default)**
+- **Dark**
+- **Colorful (gradient background)**
+
+Each theme is stored in `localStorage` and applied globally.
+
+---
+
+## 📱 **Responsive Design**
+
+Tested on:
+
+- Mobile devices
+- Tablets
+- Desktop (all screen sizes)
+
+---
+
+## 📜 **License**
+
+This project is for **learning and demo purposes**.
+
+---
+
+### 🧑‍🎨 Author
+
+Made with ❤️ by **Arjun Rastogi**
