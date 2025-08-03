@@ -31,8 +31,8 @@ const Products = () => {
 
   useEffect(() => {
     axios
-      .get("https://fakestoreapi.in/api/products")
-      .then((res) => setProducts(res.data.products))
+      .get("https://fakestoreapi.com/products")
+      .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
   }, []);
 
