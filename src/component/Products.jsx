@@ -1,4 +1,4 @@
-https React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import { ThemeContext } from "../ThemeContext";
 
