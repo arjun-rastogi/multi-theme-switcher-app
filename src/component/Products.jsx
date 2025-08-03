@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from "react";
-import axios from "axios";
 import { ThemeContext } from "../ThemeContext";
 
 const Products = () => {
@@ -30,10 +29,19 @@ const Products = () => {
   const textColor = theme === "dark" ? "text-gray-300" : "text-gray-700";
 
   useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => setProducts(res.data))
-      .catch((err) => console.error(err));
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch((err) => {
+        console.error("Fetch error:", err);
+      });
   }, []);
 
   return (
